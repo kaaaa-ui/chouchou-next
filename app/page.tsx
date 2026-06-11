@@ -150,6 +150,12 @@ function Hero() {
               height={769}
               preload
               className="w-full max-w-[400px]"
+              style={{
+                maskImage:
+                  "radial-gradient(120% 120% at 50% 42%, #000 68%, transparent 99%)",
+                WebkitMaskImage:
+                  "radial-gradient(120% 120% at 50% 42%, #000 68%, transparent 99%)",
+              }}
             />
           </Reveal>
         </div>
@@ -232,8 +238,8 @@ function StyleCard() {
       <div className="mt-3 grid grid-cols-2 gap-2.5">
         {/* AI */}
         <div className="rounded-xl border border-brand-soft bg-[#fff8f3] p-2.5">
-          <p className="flex items-center justify-center gap-1 rounded-md bg-brand-soft px-1 py-1 text-center text-[10.5px] font-extrabold text-brand-deep">
-            <IcoSparkle className="size-3" />
+          <p className="flex items-center justify-center gap-0.5 whitespace-nowrap rounded-md bg-brand-soft px-1 py-1 text-center text-[10px] font-extrabold tracking-tight text-brand-deep">
+            <IcoSparkle className="size-3 shrink-0" />
             AI配信（顔出しなし）
           </p>
           <div className="mt-2 flex gap-2">
@@ -926,9 +932,15 @@ function FooterCta() {
           <Image
             src="/images/footer_woman.png"
             alt="案内する女性スタッフ"
-            width={296}
-            height={395}
+            width={286}
+            height={353}
             className="w-[180px]"
+            style={{
+              maskImage:
+                "radial-gradient(130% 125% at 50% 100%, #000 70%, transparent 98%)",
+              WebkitMaskImage:
+                "radial-gradient(130% 125% at 50% 100%, #000 70%, transparent 98%)",
+            }}
           />
         </div>
         <div className="flex-1 pb-2 text-center md:pb-8 md:text-left">
