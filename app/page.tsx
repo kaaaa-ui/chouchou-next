@@ -146,8 +146,8 @@ function Hero() {
             <Image
               src="/images/hero.png"
               alt="ChouChouで働く女性"
-              width={707}
-              height={769}
+              width={1088}
+              height={1184}
               preload
               className="w-full max-w-[400px]"
               style={{
@@ -246,8 +246,8 @@ function StyleCard() {
             <Image
               src="/images/ai_face.png"
               alt="AI配信のイメージ"
-              width={171}
-              height={231}
+              width={228}
+              height={308}
               className="w-[42%] shrink-0 self-start rounded-lg object-cover"
             />
             <ul className="space-y-1 text-[10px] font-bold leading-snug text-ink">
@@ -272,8 +272,8 @@ function StyleCard() {
             <Image
               src="/images/mask_face.png"
               alt="マスク配信のイメージ"
-              width={171}
-              height={231}
+              width={228}
+              height={308}
               className="w-[42%] shrink-0 self-start rounded-lg object-cover"
             />
             <ul className="space-y-1 text-[10px] font-bold leading-snug text-ink">
@@ -390,8 +390,8 @@ function Support() {
                 <Image
                   src={img}
                   alt=""
-                  width={156}
-                  height={156}
+                  width={208}
+                  height={208}
                   className="size-12 rounded-full object-cover"
                 />
               ) : (
@@ -428,8 +428,8 @@ function WhyCard() {
           <Image
             src="/images/illu_1on1.png"
             alt="1対1の接客イラスト"
-            width={317}
-            height={273}
+            width={400}
+            height={400}
             className="mx-auto mt-auto w-[92px]"
           />
         </div>
@@ -446,8 +446,8 @@ function WhyCard() {
           <Image
             src="/images/illu_live.png"
             alt="複数人と同時に会話するイラスト"
-            width={356}
-            height={332}
+            width={536}
+            height={412}
             className="mx-auto mt-auto w-[118px]"
           />
         </div>
@@ -574,8 +574,8 @@ function Earnings() {
                 <Image
                   src={img}
                   alt={`${name}の写真`}
-                  width={129}
-                  height={129}
+                  width={152}
+                  height={152}
                   className="size-10 rounded-full object-cover"
                 />
                 <p className="text-[13.5px] font-extrabold text-ink">
@@ -932,8 +932,8 @@ function FooterCta() {
           <Image
             src="/images/footer_woman.png"
             alt="案内する女性スタッフ"
-            width={286}
-            height={353}
+            width={440}
+            height={544}
             className="w-[180px]"
             style={{
               maskImage:
