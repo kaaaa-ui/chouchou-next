@@ -8,7 +8,7 @@ import {
   IcoChat, IcoArrowR, IcoRibbon, IcoSparkle,
 } from "@/components/icons";
 
-const LINE_URL = "https://chouchou-live.com/r/?rid=rt_555964e8";
+const LINE_URL = "https://lin.ee/Ori27QX";
 
 /* ============================== shared bits ============================== */
 
@@ -150,12 +150,6 @@ function Hero() {
               height={1184}
               preload
               className="w-full max-w-[400px]"
-              style={{
-                maskImage:
-                  "radial-gradient(120% 120% at 50% 42%, #000 68%, transparent 99%)",
-                WebkitMaskImage:
-                  "radial-gradient(120% 120% at 50% 42%, #000 68%, transparent 99%)",
-              }}
             />
           </Reveal>
         </div>
@@ -763,12 +757,14 @@ function CheckPhotoCard({
   points,
   img,
   imgAlt,
+  imgClass = "h-[88px] w-full object-cover",
 }: {
   title: string;
   lead: string;
   points: string[];
   img: string;
   imgAlt: string;
+  imgClass?: string;
 }) {
   return (
     <Card title={title}>
@@ -791,7 +787,7 @@ function CheckPhotoCard({
         alt={imgAlt}
         width={600}
         height={200}
-        className="mt-3 h-[88px] w-full rounded-lg object-cover"
+        className={`mt-3 rounded-lg ${imgClass}`}
       />
     </Card>
   );
@@ -935,12 +931,6 @@ function FooterCta() {
             width={440}
             height={544}
             className="w-[180px]"
-            style={{
-              maskImage:
-                "radial-gradient(130% 125% at 50% 100%, #000 70%, transparent 98%)",
-              WebkitMaskImage:
-                "radial-gradient(130% 125% at 50% 100%, #000 70%, transparent 98%)",
-            }}
           />
         </div>
         <div className="flex-1 pb-2 text-center md:pb-8 md:text-left">
@@ -1022,6 +1012,7 @@ export default function Page() {
                 points={LEGAL_POINTS}
                 img="/images/legal_photo.png"
                 imgAlt="法務サポートのイメージ"
+                imgClass="mx-auto h-[110px] w-auto object-contain"
               />
             </Reveal>
             <Reveal delay={200}><WarnCard /></Reveal>
