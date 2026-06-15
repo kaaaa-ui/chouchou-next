@@ -8,7 +8,7 @@ import {
   IcoChat, IcoArrowR, IcoRibbon, IcoSparkle,
 } from "@/components/icons";
 
-const LINE_URL = "https://lin.ee/Ori27QX";
+const LINE_URL = "https://chouchou-live.com/r/?rid=rt_d8cf37f0";
 
 /* ============================== shared bits ============================== */
 
