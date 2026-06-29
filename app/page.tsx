@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { JsonLd } from "@/components/JsonLd";
 import { Reveal, CountUp, FaqItem } from "@/components/motion";
 import {
   IcoNoFace, IcoHome, IcoFemale, IcoBanYen, IcoCheck, IcoX, IcoMask,
@@ -974,6 +975,7 @@ function FooterCta() {
 export default function Page() {
   return (
     <>
+      <JsonLd faqs={FAQS} />
       <Header />
       <main>
         <Hero />
@@ -1024,7 +1026,24 @@ export default function Page() {
         </div>
         <FooterCta />
       </main>
-      <footer className="bg-[#fbe7df] py-3">
+      <footer className="bg-[#fbe7df] py-4">
+        <nav className="mx-auto mb-2 flex max-w-[1100px] flex-wrap justify-center gap-x-4 gap-y-1 px-4 text-[11.5px] font-bold text-ink-soft">
+          <a href="/compare" className="hover:text-brand">
+            チャトレ事務所の比較
+          </a>
+          <a href="/column" className="hover:text-brand">
+            コラム
+          </a>
+          <a href="/column/mibare-taisaku" className="hover:text-brand">
+            身バレ対策
+          </a>
+          <a href="/column/tedori-houshu" className="hover:text-brand">
+            手取り・報酬
+          </a>
+          <a href="/column/zaitaku-anzen" className="hover:text-brand">
+            在宅の安全性
+          </a>
+        </nav>
         <p className="mx-auto max-w-[1100px] px-4 text-center text-[10px] leading-relaxed text-ink-soft">
           ※本サービスは「ライブ配信」サービスであり、面接・サービス提供において年齢確認を行います。18歳未満の方のご利用はお断りしております。
         </p>
