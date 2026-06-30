@@ -41,7 +41,7 @@ export default async function ColumnPage({
   if (!col) notFound();
 
   const path = `/column/${col.slug}`;
-  const graph = [
+  const graph: Record<string, unknown>[] = [
     {
       "@type": "BreadcrumbList",
       itemListElement: [
@@ -70,6 +70,18 @@ export default async function ColumnPage({
       })),
     },
   ];
+  if (col.howto) {
+    graph.push({
+      "@type": "HowTo",
+      name: col.howto.name,
+      step: col.howto.steps.map((s, i) => ({
+        "@type": "HowToStep",
+        position: i + 1,
+        name: s.name,
+        text: s.text,
+      })),
+    });
+  }
   const jsonLd = { "@context": "https://schema.org", "@graph": graph };
 
   return (
@@ -105,6 +117,34 @@ export default async function ColumnPage({
             </p>
           </Card>
         </header>
+
+        {col.howto && (
+          <section className="space-y-3">
+            <h2 className="text-[18px] font-extrabold text-brand-deep">
+              {col.howto.name}
+            </h2>
+            <ol className="space-y-2">
+              {col.howto.steps.map((s, i) => (
+                <li
+                  key={s.name}
+                  className="flex gap-3 rounded-xl bg-brand-soft/40 p-3"
+                >
+                  <span className="grid size-6 shrink-0 place-items-center rounded-full bg-brand text-[12px] font-extrabold text-white">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="text-[14px] font-extrabold text-ink">
+                      {s.name}
+                    </p>
+                    <p className="mt-0.5 text-[12.5px] leading-relaxed text-ink-soft">
+                      {s.text}
+                    </p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
+        )}
 
         {col.sections.map((s) => (
           <section key={s.h2} className="space-y-2">
